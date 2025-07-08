@@ -16,7 +16,7 @@ export class Product {
 
     @IsNotEmpty()
     @Column({ length: 255, nullable: false })
-    gender: string;
+    stripe: string; /*tarja*/
 
     @IsNotEmpty()
     @Column({ type: 'decimal', precision: 10, scale: 2, nullable: false })
