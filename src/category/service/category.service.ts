@@ -12,9 +12,9 @@ export class CategoryService {
 
   async findAll(): Promise<Category[]> {
     return await this.categoryRepository.find({
-      /*relations: {
+      relations: {
         product: true,
-      },*/
+      },
     });
   }
 
@@ -23,9 +23,9 @@ export class CategoryService {
       where: {
         id,
       },
-      /*relations: {
+      relations: {
         product: true,
-      },*/
+      },
     });
 
     if (!category)
@@ -39,9 +39,9 @@ export class CategoryService {
       where: {
         category: ILike(`%${category}%`),
       },
-      /*relations: {
+      relations: {
         product: true,
-      },*/
+      },
     });
   }
 
